@@ -1,0 +1,57 @@
+image: "macaronios/phoenix-minimal-devel:latest-amd64"
+env:
+- LUET_YES=true
+- LUET_NOLOCK=true
+- HTTP_TIMEOUT=0
+prelude:
+- >-
+  luet repo update --force &&
+  luet upgrade &&
+  luet i --force
+  toolchain/base
+  toolchain/release
+  toolchain/meta-repo
+  toolchain/meta-geaaru-kit
+  toolchain/boot
+  toolchain/office
+  toolchain/emulation
+  toolchain/java
+  toolchain/media-gfx
+  toolchain/server
+  toolchain/xorg-extra
+  toolchain/python
+  app-admin/whip
+  whip-profiles/macaroni
+  macaroni/whip-catalog
+  macaroni/entities-catalog
+  macaroni/ctl
+  macaroni/skel-phoenix
+  dev-util/pkgs-checker-minimal
+  system/entities
+  system/luet-devkit
+  virtual/base
+  utils/jq
+  utils/yq
+  kernel-5.10/macaroni-lts-sources &&
+  luet miner ri virtual/base &&
+  luet cleanup --purge-repos &&
+  eselect kernel set 1 &&
+  /usr/bin/gcc-config 1 &&
+  source /etc/profile &&
+  eselect gcc set 1 &&
+  eselect binutils set 1 &&
+  mkdir -p /var/lib/portage &&
+  whip hook eclass_db.db_fix_so &&
+  whip hook perl.postinst &&
+  epro list &&
+  eval 'rm /etc/localtime || true' &&
+  ln -s /usr/share/zoneinfo/Europe/Rome /etc/localtime &&
+  macaronictl env-update &&
+  eval 'locale-gen || true' &&
+  build-docbook-catalog &&
+  luet cleanup --purge-repos &&
+  entities merge -s /usr/share/macaroni/entities -a &&
+  cd / && rm -rf /luetbuild &&
+  mkdir /layer
+
+package_dir: /layer
