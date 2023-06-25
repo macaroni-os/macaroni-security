@@ -12,6 +12,7 @@ export TREE?=$(ROOT_DIR)/packages
 REPO_CACHE?=quay.io/geaaru/security-amd64-cache
 export REPO_CACHE
 BUILD_ARGS?=--pull --no-spinner
+GENIDX_ARGS?=--only-upper-level
 SUDO?=
 VALIDATE_OPTIONS?=
 ARCH?=amd64
@@ -54,8 +55,12 @@ rebuild:
 rebuild-all:
 	$(SUDO) $(LUET) build $(BUILD_ARGS) --tree=$(TREE) --full --destination $(DESTINATION) --backend $(BACKEND) --concurrency $(CONCURRENCY) --compression $(COMPRESSION)
 
+.PHONY: genidx
+genidx:
+	$(SUDO) $(LUET) tree genidx $(GENIDX_ARGS) --tree=$(TREE)
+
 .PHONY: create-repo
-create-repo:
+create-repo: genidx
 	$(SUDO) $(LUET) create-repo --tree "$(TREE)" \
     --output $(DESTINATION) \
     --packages $(DESTINATION) \
