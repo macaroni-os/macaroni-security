@@ -12,7 +12,7 @@ export TREE?=$(ROOT_DIR)/packages
 REPO_CACHE?=quay.io/geaaru/security-amd64-cache
 export REPO_CACHE
 BUILD_ARGS?=--pull --no-spinner
-GENIDX_ARGS?=--only-upper-level
+GENIDX_ARGS?=--only-upper-level --compress=false
 SUDO?=
 VALIDATE_OPTIONS?=
 ARCH?=amd64
