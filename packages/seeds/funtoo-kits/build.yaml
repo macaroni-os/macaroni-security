@@ -1,0 +1,34 @@
+requires:
+  - name: macaroni-phoenix-base
+    category: "seed"
+    version: ">=0"
+env:
+- JOBS=10
+- GIT_HISTORY_ENTRIES=3000
+- FEATURES="-sandbox -usersandbox -ipc-sandbox -pid-sandbox -network-sandbox"
+prelude:
+- >-
+  mv kits-versions / &&
+  ego sync &&
+  cd /var/git/meta-repo/kits &&
+  chown root:root -R /var/git/meta-repo/kits &&
+  ls -l &&
+  for i in $(ls .) ; do
+  echo $i ;
+  if [ -e /kits-versions/$i.yml ] ; then
+  hash=$(yq r /kits-versions/$i.yml 'commit') ;
+  echo "For kit $i set hash $hash" ;
+  pushd $i ;
+  git pull -ff --depth=$GIT_HISTORY_ENTRIES ;
+  git checkout $hash || exit 1 ;
+  popd ;
+  fi ;
+  done &&
+  chown portage:portage -R /var/git/meta-repo/kits
+# Enable meson-0.63
+# I want move ahead meson
+- >-
+  sed -e 's/^RDEPEND=.*/RDEPEND=""/g' -i
+  /var/git/meta-repo/kits/core-kit/sys-apps/baselayout/baselayout-*.ebuild &&
+  sed '/meson/d' -i
+  /var/git/meta-repo/kits/core-kit/profiles/package.mask/01-funtoo
