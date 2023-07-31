@@ -1,0 +1,5 @@
+name: virtualbox-common
+version: 7.0.8.156879+5
+category: kernel
+labels:
+  kernel.branch: "5.10"

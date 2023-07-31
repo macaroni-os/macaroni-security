@@ -1,0 +1,7 @@
+requires:
+  - name: "virtualbox-modules"
+    category: "kernel-{{ ( index .Values.labels "kernel.branch" ) }}"
+    version: ">=0"
+package_dir: /virtualbox-modules
+excludes:
+- ^/lib/modules/
