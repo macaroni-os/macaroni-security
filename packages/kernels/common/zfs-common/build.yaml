@@ -1,0 +1,14 @@
+requires:
+  - name: "zfs-kmod"
+    category: "kernel-{{ ( index .Values.labels "kernel.branch" ) }}"
+    version: ">=0"
+env:
+- FEATURES="-sandbox -usersandbox -ipc-sandbox -pid-sandbox -network-sandbox"
+package_dir: /zfs-kmod
+excludes:
+- ^/lib/modules/
+- /usr/src/spl-{{ ( index .Values.labels "zfs.version" ) }}/*-macaroni
+- /usr/src/spl-{{ ( index .Values.labels "zfs.version" ) }}/*-macaroni/*
+- /usr/src/zfs-{{ ( index .Values.labels "zfs.version" ) }}/*-macaroni
+- /usr/src/zfs-{{ ( index .Values.labels "zfs.version" ) }}/*-macaroni/*
+
