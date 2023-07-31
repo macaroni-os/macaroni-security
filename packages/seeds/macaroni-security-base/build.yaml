@@ -1,0 +1,12 @@
+prelude:
+# dev-util/kbuild is needed for virtualbox-guest-additions
+- >-
+  export LUET_YES=true &&
+  export LUET_NOLOCK=true &&
+  luet repo update && luet i repository/macaroni-security-dev &&
+  luet repo update && luet upgrade &&
+  luet cleanup
+requires:
+- category: "seed"
+  name: "macaroni-phoenix-base"
+  version: ">=0"
