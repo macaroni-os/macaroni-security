@@ -5,7 +5,8 @@ env:
 prelude:
 # dev-util/kbuild is needed for virtualbox-guest-additions
 - >-
-  luet repo update &&
+  luet i repository/macaroni-commons-dev &&
+  luet repo update && luet upgrade &&
   luet install --sync-repos kernel-6.1/macaroni-sources dev-util/kbuild --nodeps &&
   luet cleanup &&
   cd /usr/src && eval 'rm linux || true' && ln -s linux-$KERNEL_VERSION-macaroni linux
