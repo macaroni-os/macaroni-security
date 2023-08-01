@@ -10,8 +10,12 @@ steps:
   luet i -y --sync-repos kernel-5.10/macaroni-lts-modules --nodeps && luet cleanup &&
   cd /lib/modules/{{ ( index .Values.labels "kernel.version" ) }}-{{ ( index .Values.labels "kernel.suffix" ) }} &&
   ln -s /usr/src/linux-{{ ( index .Values.labels "kernel.version" ) }}-{{ ( index .Values.labels "kernel.suffix" ) }} build
+# TODO: Check permission of /tmp on upper layer to avoid errors with kmk
+# * Extracting guest kernel module sources ...
+# kmk: *** tmpfile: Permission denied.  Stop.
 - >-
   epro list &&
+  chmod a+rwx /tmp/ &&
   {{- if .Values.use_flags }}
   USE="{{ join " " .Values.use_flags }}" emerge {{ ( index .Values.labels "emerge.packages" ) }} -pv -t
   {{- else }}
