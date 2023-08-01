@@ -1,5 +1,5 @@
 name: kernel
-version: "5.10.188+1"
+version: 5.10.188+2
 category: seed-5.10
 hidden: true
 labels:
