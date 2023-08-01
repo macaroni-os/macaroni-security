@@ -1,5 +1,5 @@
 name: kernel
-version: 5.4.251+1
+version: 5.4.251+2
 category: seed-5.4
 hidden: true
 labels:
