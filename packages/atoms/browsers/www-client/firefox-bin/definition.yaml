@@ -8,9 +8,63 @@ use_flags:
 - -selinux
 - pulseaudio
 requires:
-- name: macaroni-security-base
+- name: atk
   version: '>=0'
-  category: seed
+  category: dev-libs
+- name: dbus-glib
+  version: '>=0'
+  category: dev-libs
+- name: glib
+  version: '>=0'
+  category: dev-libs-2
+- name: fontconfig
+  version: '>=0'
+  category: media-libs-1.0
+- name: freetype
+  version: '>=0'
+  category: media-libs-2
+- name: pulseaudio
+  version: '>=0'
+  category: media-sound
+- name: dbus
+  version: '>=0'
+  category: sys-apps
+- name: freedesktop-icon-theme
+  version: '>=0'
+  category: virtual
+- name: cairo
+  version: '>=0'
+  category: x11-libs
+- name: gdk-pixbuf
+  version: '>=0'
+  category: x11-libs-2
+- name: gtk+
+  version: '>=0'
+  category: x11-libs-2
+- name: libX11
+  version: '>=0'
+  category: x11-libs
+- name: libXcomposite
+  version: '>=0'
+  category: x11-libs
+- name: libXdamage
+  version: '>=0'
+  category: x11-libs
+- name: libXext
+  version: '>=0'
+  category: x11-libs
+- name: libXfixes
+  version: '>=0'
+  category: x11-libs
+- name: libXrender
+  version: '>=0'
+  category: x11-libs
+- name: libXt
+  version: '>=0'
+  category: x11-libs
+- name: pango
+  version: '>=0'
+  category: x11-libs
 annotations:
   subsets:
     rules:
