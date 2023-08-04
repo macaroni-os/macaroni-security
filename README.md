@@ -20,9 +20,13 @@ $> luet-portage-converter generate \
     --rules portage-converter/browsers-extra.yaml \
     --ignore-missing-deps   --disable-conflicts \
     --to . --enable-stage4 --ignore-wrong-packages \
+    --disable-stage3 \
     -t packages/  --skip-rdeps-generation
 ```
 
 Due to a limitation of the current implementation of `luet-portage-converter`
 tool the stage4 doesn't work correctly without all dependencies in the
 selected tree.
+
+In addition, it's possible that the option `--disable-stage3` must be
+added too.
