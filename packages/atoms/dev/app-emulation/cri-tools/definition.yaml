@@ -1,0 +1,22 @@
+name: cri-tools
+version: 1.27.1
+category: app-emulation
+annotations:
+  subsets:
+    rules:
+      devel:
+      - ^/usr/include/
+      portage:
+      - ^/var/db/pkg/
+description: CLI and validation tools for Kubelet Container Runtime (CRI)
+uri:
+- https://github.com/kubernetes-sigs/cri-tools
+license: Apache-2.0 BSD BSD-2 CC-BY-SA-4.0 ISC MIT MPL-2.0
+labels:
+  BDEPEND: '>=dev-lang/go-1.12 app-arch/unzip'
+  DEPEND: dev-lang/go
+  emerge.packages: app-emulation/cri-tools
+  kit: dev-kit
+  original.package.name: app-emulation/cri-tools
+  original.package.slot: "0"
+  original.package.version: 1.27.1
