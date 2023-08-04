@@ -1,6 +1,6 @@
 name: kernel
-version: 5.15.123+2
+version: 5.15.124
 category: seed-5.15
 hidden: true
 labels:
-  kernel.version: 5.15.123
+  kernel.version: 5.15.124
