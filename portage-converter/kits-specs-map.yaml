@@ -1,0 +1,35 @@
+
+extra-pkgs:
+  kits:
+    core-kit:
+      specs:
+        - net.yaml
+    geaaru-kit:
+      specs:
+        - net.yaml
+    net-kit:
+      specs:
+        - net.yaml
+    browser-kit:
+      specs:
+        - browsers-extra.yaml
+    dev-kit:
+      specs:
+        - dev.yaml
+    editors-kit:
+      specs:
+        - dev.yaml
+
+seeds:
+  - name: macaroni-security-base
+    prefix: packages/atoms
+    specs:
+      - file: browser-extra.yaml
+        dir: browsers
+
+      - file: dev.yaml
+        dir: dev
+
+      - file: net.yaml
+        dir: net
+
