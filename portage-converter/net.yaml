@@ -97,6 +97,7 @@ artefacts:
     disabled:
       - nios2
       - sh
+      - selinux
   finalizer:
     shell:
       - "/bin/bash"
@@ -112,6 +113,7 @@ artefacts:
   packages:
     - net-im/discord-bin
     - net-im/mattermost-desktop-bin
+    - mail-client/thunderbird-bin
 
 - tree: packages/atoms/net
   mutations:
