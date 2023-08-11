@@ -196,7 +196,7 @@ artefacts:
     - dev-util/jenkins-lts-bin
     - dev-util/just
     - dev-util/mongodb-compass
-    - dev-util/radare2
+    #- dev-util/radare2
     - app-emulation/cri-tools
     - dev-embedded/arduino-bin
     - dev-util/smem
