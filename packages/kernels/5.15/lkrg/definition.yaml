@@ -1,7 +1,7 @@
 name: lkrg
-version: 0.9.6+9
+version: 0.9.6+10
 category: kernel-5.15
 labels:
   emerge.packages: app-antivirus/lkrg
   kernel.suffix: macaroni
-  kernel.version: 5.15.124
+  kernel.version: 5.15.128
