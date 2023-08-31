@@ -1,4 +1,8 @@
 prelude:
+# Temporary skipping go mod tidy in error when go.mod contains go 1.21
+- >-
+   sed -i -e 's|go mod tidy|echo go mod tidy disabled|g'
+   /var/git/meta-repo/kits/core-kit/eclass/go-module.eclass
 - |-
   export FEATURES="-sandbox -usersandbox -ipc-sandbox -pid-sandbox -network-sandbox" && \
   export JOBS={{ ( index .Values.labels "jobs" ) | default "3" }} && \
