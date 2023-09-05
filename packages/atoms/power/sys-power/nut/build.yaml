@@ -24,9 +24,6 @@ excludes:
 - ^/var/cache/portage/
 - ^/var/git/
 requires:
-- name: net-snmp
-  version: '>=0'
-  category: net-analyzer
 - name: freeipmi
   version: '>=0'
   category: sys-libs
