@@ -1,0 +1,92 @@
+name: nut
+version: 2.7.4
+category: sys-power
+use_flags:
+- -selinux
+- cgi
+- gui
+- ipmi
+- snmp
+- ssl
+- tcpd
+- usb
+- xml
+- zeroconf
+requires:
+- name: openssl
+  version: '>=0'
+  category: dev-libs
+- name: pygtk
+  version: '>=0'
+  category: dev-python-2
+- name: gd
+  version: '>=0'
+  category: media-libs-2
+- name: net-snmp
+  version: '>=0'
+  category: net-analyzer
+- name: avahi
+  version: '>=0'
+  category: net-dns
+- name: libnsl
+  version: '>=0'
+  category: net-libs
+- name: neon
+  version: '>=0'
+  category: net-libs
+- name: tcp-wrappers
+  version: '>=0'
+  category: sys-apps
+- name: freeipmi
+  version: '>=0'
+  category: sys-libs
+- name: libusb
+  version: '>=0'
+  category: virtual-1
+- name: udev
+  version: '>=0'
+  category: virtual
+annotations:
+  subsets:
+    rules:
+      devel:
+      - ^/usr/include/
+      portage:
+      - ^/var/db/pkg/
+description: Network-UPS Tools
+uri:
+- https://www.networkupstools.org/
+license: GPL-2
+labels:
+  BDEPEND: virtual/pkgconfig >=sys-apps/sed-4 >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3
+    || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69
+    >=sys-devel/libtool-2.4 virtual/pkgconfig
+  DEPEND: dev-libs/libltdl:* net-libs/libnsl virtual/udev cgi? ( >=media-libs/gd-2[png]
+    ) gui? ( dev-python/pygtk[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)]
+    ) ipmi? ( sys-libs/freeipmi ) snmp? ( net-analyzer/net-snmp ) ssl? ( >=dev-libs/openssl-1:=
+    ) tcpd? ( sys-apps/tcp-wrappers ) usb? ( virtual/libusb:0= ) xml? ( >=net-libs/neon-0.25.0
+    ) zeroconf? ( net-dns/avahi ) >=sys-apps/sed-4 sys-apps/shadow
+  IUSE: cgi gui ipmi snmp +usb selinux ssl tcpd xml zeroconf +ups_drivers_al175 +ups_drivers_bcmxcp
+    +ups_drivers_belkin +ups_drivers_belkinunv +ups_drivers_bestfcom +ups_drivers_bestfortress
+    +ups_drivers_bestuferrups +ups_drivers_bestups +ups_drivers_dummy-ups +ups_drivers_etapro
+    +ups_drivers_everups +ups_drivers_gamatronic +ups_drivers_genericups +ups_drivers_isbmex
+    +ups_drivers_liebert +ups_drivers_liebert-esp2 +ups_drivers_masterguard +ups_drivers_metasys
+    +ups_drivers_oldmge-shut +ups_drivers_mge-utalk +ups_drivers_microdowell +ups_drivers_mge-shut
+    +ups_drivers_oneac +ups_drivers_optiups +ups_drivers_powercom +ups_drivers_rhino
+    +ups_drivers_safenet +ups_drivers_solis +ups_drivers_tripplite +ups_drivers_tripplitesu
+    +ups_drivers_upscode2 +ups_drivers_victronups +ups_drivers_powerpanel +ups_drivers_blazer_ser
+    +ups_drivers_clone +ups_drivers_clone-outlet +ups_drivers_ivtscd +ups_drivers_apcsmart
+    +ups_drivers_apcsmart-old +ups_drivers_apcupsd-ups +ups_drivers_riello_ser +ups_drivers_nutdrv_qx
+    +ups_drivers_usbhid-ups +ups_drivers_bcmxcp_usb +ups_drivers_tripplite_usb +ups_drivers_blazer_usb
+    +ups_drivers_richcomm_usb +ups_drivers_riello_usb +ups_drivers_nutdrv_qx ups_drivers_netxml-ups
+    ups_drivers_snmp-ups ups_drivers_nut-ipmipsu python_single_target_python2_7 python_targets_python2_7
+  RDEPEND: dev-libs/libltdl:* net-libs/libnsl virtual/udev cgi? ( >=media-libs/gd-2[png]
+    ) gui? ( dev-python/pygtk[python_targets_python2_7(-)?,-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_6(-),-python_single_target_python3_9(-),-python_single_target_python3_8(-),-python_single_target_python3_10(-)]
+    ) ipmi? ( sys-libs/freeipmi ) snmp? ( net-analyzer/net-snmp ) ssl? ( >=dev-libs/openssl-1:=
+    ) tcpd? ( sys-apps/tcp-wrappers ) usb? ( virtual/libusb:0= ) xml? ( >=net-libs/neon-0.25.0
+    ) zeroconf? ( net-dns/avahi ) selinux? ( sec-policy/selinux-nut )
+  emerge.packages: sys-power/nut
+  kit: nokit
+  original.package.name: sys-power/nut
+  original.package.slot: "0"
+  original.package.version: 2.7.4-r2
