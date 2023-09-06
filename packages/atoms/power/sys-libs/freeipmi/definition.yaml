@@ -1,12 +1,9 @@
 name: freeipmi
-version: 1.6.3
+version: 1.6.3+1
 category: sys-libs
 use_flags:
-- nagios
+- -nagios
 requires:
-- name: perl
-  version: '>=0'
-  category: dev-lang
 - name: libgcrypt
   version: '>=0'
   category: dev-libs
