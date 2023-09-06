@@ -24,6 +24,6 @@ excludes:
 - ^/var/cache/portage/
 - ^/var/git/
 requires:
-- name: macaroni-security-base
+- name: i2c-tools
   version: '>=0'
-  category: seed
+  category: sys-apps
