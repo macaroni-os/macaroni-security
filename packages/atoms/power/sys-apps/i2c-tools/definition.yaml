@@ -1,14 +1,14 @@
 name: i2c-tools
-version: "4.1"
+version: 4.1+1
 category: sys-apps
 use_flags:
 - -python_targets_python2_7
 - -python_targets_python3_10
 - -python_targets_python3_8
+- -python_targets_python3_9
 - perl
 - python
 - python_targets_python3_7
-- python_targets_python3_9
 requires:
 - name: perl
   version: '>=0'
