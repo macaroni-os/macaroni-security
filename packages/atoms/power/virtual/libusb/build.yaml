@@ -24,6 +24,6 @@ excludes:
 - ^/var/cache/portage/
 - ^/var/git/
 requires:
-- name: libusb-compat
+- name: freeipmi
   version: '>=0'
-  category: dev-libs
+  category: sys-libs
