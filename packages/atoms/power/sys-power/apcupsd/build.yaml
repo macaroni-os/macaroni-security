@@ -27,6 +27,3 @@ requires:
 - name: macaroni-security-base
   version: '>=0'
   category: seed
-- name: net-snmp
-  version: '>=0'
-  category: net-analyzer
