@@ -29,6 +29,7 @@ packages:
   - app-arch/lz4:0
   - app-arch/pax:0
   - app-arch/rpm2targz:0
+  - app-arch/rpm:0
   - app-arch/snappy:0
   - app-arch/tar:0
   - app-arch/unzip:0
@@ -83,6 +84,7 @@ packages:
   - app-eselect/eselect-mpg123:0
   - app-eselect/eselect-notify-send:0
   - app-eselect/eselect-opengl:0
+  - app-eselect/eselect-php:0
   - app-eselect/eselect-pinentry:0
   - app-eselect/eselect-postgresql:0
   - app-eselect/eselect-python:0
@@ -183,6 +185,7 @@ packages:
   - app-text/sgml-common:0
   - app-text/teckit:0
   - app-text/texlive-core:0
+  - app-text/tidy-html5:0
   - app-text/xmlto:0
   - app-text/xournal:0
   - app-text/yelp-tools:0
@@ -232,6 +235,8 @@ packages:
   - dev-lang/nasm:0
   - dev-lang/orc:0
   - dev-lang/perl:0
+  - dev-lang/php:7.4
+  - dev-lang/php:8.1
   - dev-lang/python-exec:2
   - dev-lang/python:3.7
   - dev-lang/ruby:2.6
@@ -289,6 +294,7 @@ packages:
   - dev-libs/libatomic_ops:0
   - dev-libs/libbpf:0
   - dev-libs/libbsd:0
+  - dev-libs/libbson:0
   - dev-libs/libburn:0
   - dev-libs/libbytesize:0
   - dev-libs/libcdio-paranoia:0
@@ -323,6 +329,7 @@ packages:
   - dev-libs/liblouis:0
   - dev-libs/libltdl:0
   - dev-libs/libmanette:0
+  - dev-libs/libmcrypt:0
   - dev-libs/libmspack:0
   - dev-libs/libnatspec:0
   - dev-libs/libnl:3
@@ -349,6 +356,7 @@ packages:
   - dev-libs/libyaml:0
   - dev-libs/libzip:0
   - dev-libs/lzo:2
+  - dev-libs/mongo-c-driver:0
   - dev-libs/mpc:0
   - dev-libs/mpfr:0
   - dev-libs/nettle:0
@@ -357,6 +365,7 @@ packages:
   - dev-libs/nspr:0
   - dev-libs/nss:0
   - dev-libs/ocl-icd:0
+  - dev-libs/oniguruma:0
   - dev-libs/openssl:0
   - dev-libs/plasma-wayland-protocols:0
   - dev-libs/popt:0
@@ -381,6 +390,7 @@ packages:
   - dev-lisp/uiop:0
   - dev-lua/LuaBitOp:0
   - dev-lua/lpeg:0
+  - dev-lua/lua:5.3
   - dev-lua/luaexpat:0
   - dev-lua/luajson:0
   - dev-lua/luasocket:0
@@ -494,6 +504,8 @@ packages:
   - dev-perl/libwww-perl:0
   - dev-perl/namespace-autoclean:0
   - dev-perl/namespace-clean:0
+  - dev-php/pecl-mcrypt:0
+  - dev-php/pecl-mongodb:0
   - dev-python/Babel:0
   - dev-python/PyQt-builder:0
   - dev-python/PyQt5-sip:0
@@ -1165,6 +1177,7 @@ packages:
   - media-video/totem:0
   - media-video/vlc:0
   - net-analyzer/gnome-nettool:0
+  - net-analyzer/net-snmp:0
   - net-analyzer/nmap:0
   - net-analyzer/openbsd-netcat:0
   - net-analyzer/tcpdump:0
@@ -1449,6 +1462,7 @@ packages:
   - sys-libs/zlib:0
   - sys-power/iasl:0
   - sys-power/upower:0
+  - sys-process/audit:0
   - sys-process/htop:0
   - sys-process/procps:0
   - sys-process/psmisc:0
