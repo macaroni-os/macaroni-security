@@ -168,7 +168,6 @@ artefacts:
           category: seed
   packages:
     - dev-util/eclipse-sdk-bin:2023.06
-    - dev-libs/xxhash
 
 - tree: packages/atoms/dev
   packages:
