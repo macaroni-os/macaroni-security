@@ -106,32 +106,6 @@ artefacts:
 
 - tree: packages/atoms/power
   mutations:
-  uses:
-    disabled:
-      - nios2
-      - sh
-      - selinux
-      - nagios
-  packages:
-    - dev-libs/libusb-compat
-
-- tree: packages/atoms/power
-  mutations:
-    buildtime_deps:
-      packages:
-        - category: dev-libs
-          name: libusb-compat
-  uses:
-    disabled:
-      - nios2
-      - sh
-      - selinux
-      - nagios
-  packages:
-    - virtual/libusb:0
-
-- tree: packages/atoms/power
-  mutations:
     buildtime_deps:
       packages:
         - category: seed
@@ -159,11 +133,6 @@ artefacts:
     - sys-apps/i2c-tools
 
 - tree: packages/atoms/power
-  mutations:
-    buildtime_deps:
-      packages:
-        - category: virtual
-          name: libusb
   uses:
     disabled:
       - nios2
