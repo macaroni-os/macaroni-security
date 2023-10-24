@@ -1,5 +1,0 @@
-DISTRIB_ID="macaroni"
-DISTRIB_DESCRIPTION="Macaroni OS"
-DISTRIB_RELEASE=23.08
-DISTRIB_CODENAME=phoenix
-LSB_VERSION="funtoo-macaroni-23.08-amd64"
