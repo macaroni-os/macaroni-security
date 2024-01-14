@@ -8,19 +8,34 @@ prelude:
   luet repo update --force &&
   luet upgrade &&
   luet i --force
-  toolchain/base
-  toolchain/release
-  toolchain/meta-repo
-  toolchain/meta-geaaru-kit
+  toolchain/base-extra
+  toolchain/base-python
+  toolchain/base-tools
+  toolchain/base-tools2
+  toolchain/base-xorg
+  toolchain/base-xorg2
+  toolchain/fonts
+  toolchain/base-gtk
+  toolchain/base-gtk2
+  toolchain/base-editors
+  toolchain/xorg-base
+  toolchain/base-net
+  toolchain/base-lang
+  toolchain/base-fs
+  toolchain/db
+  toolchain/base-qt
+  toolchain/base-audio
+  toolchain/base-video
+  toolchain/base-multimedia
+  toolchain/base-text
+  toolchain/base-latex
+  toolchain/base-multimedia2
   toolchain/boot
-  toolchain/office
-  toolchain/emulation
-  toolchain/java
-  toolchain/media-gfx
-  toolchain/server
-  toolchain/xorg-extra
-  toolchain/python
-  toolchain/extra-php
+  toolchain/shells
+  toolchain/base-qt2
+  toolchain/base-gnome
+  toolchain/base-gnome2
+  toolchain/portage-tools
   app-admin/whip
   whip-profiles/macaroni
   macaroni/whip-catalog
@@ -34,7 +49,6 @@ prelude:
   utils/jq
   utils/yq
   kernel-5.10/macaroni-lts-sources &&
-  luet miner ri virtual/base &&
   luet cleanup --purge-repos &&
   eselect kernel set 1 &&
   /usr/bin/gcc-config 1 &&
@@ -42,15 +56,17 @@ prelude:
   eselect gcc set 1 &&
   eselect binutils set 1 &&
   mkdir -p /var/lib/portage &&
-  whip hook eclass_db.db_fix_so &&
-  whip hook perl.postinst &&
-  epro list &&
   eval 'rm /etc/localtime || true' &&
   ln -s /usr/share/zoneinfo/Europe/Rome /etc/localtime &&
+  whip hook eclass_db.db_fix_so perl.postinst &&
+  whip h qt5.qconfig_gen &&
+  whip h sgml.update_catalog &&
+  eselect rust set 1 &&
+  eselect postgresql set 13 &&
+  epro list &&
   macaronictl env-update &&
   eval 'locale-gen || true' &&
   build-docbook-catalog &&
-  luet cleanup --purge-repos &&
   entities merge -s /usr/share/macaroni/entities -a &&
   cd / && rm -rf /luetbuild &&
   mkdir /layer
