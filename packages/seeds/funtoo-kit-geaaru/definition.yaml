@@ -1,7 +1,7 @@
 category: "seed"
 name: "funtoo-kit-geaaru"
-version: "0.20230905"
+version: "0.20240111"
 labels:
   repo: "https://github.com/geaaru/geaaru_overlay.git"
-  repo_hash: "e78a6a83e27b74c38a4a53a516dce102631b55c7"
+  repo_hash: "f50e8913c683e13be8322cae4c48a94cb0ef5e62"
   repo_branch: "funtoo"
