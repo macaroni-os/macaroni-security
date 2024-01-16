@@ -114,6 +114,7 @@ artefacts:
   packages:
     - www-client/vivaldi
     - www-client/firefox-bin
+    - www-client/firefox
     - www-client/opera
     - www-client/brave-bin
 
