@@ -1,5 +1,5 @@
 name: google-chrome
-version: 116.0.5845.140
+version: 120.0.6099.216
 category: www-client
 use_flags:
 - -selinux
@@ -131,4 +131,4 @@ labels:
   kit: browser-kit
   original.package.name: www-client/google-chrome
   original.package.slot: "0"
-  original.package.version: 116.0.5845.140
+  original.package.version: 120.0.6099.216
