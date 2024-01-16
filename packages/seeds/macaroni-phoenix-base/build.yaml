@@ -8,6 +8,8 @@ prelude:
   luet repo update --force &&
   luet upgrade &&
   luet i --force
+  toolchain/meta-repo
+  toolchain/meta-geaaru-kit
   toolchain/base
   toolchain/base-extra
   toolchain/base-python
