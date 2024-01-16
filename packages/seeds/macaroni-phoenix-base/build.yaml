@@ -8,6 +8,7 @@ prelude:
   luet repo update --force &&
   luet upgrade &&
   luet i --force
+  toolchain/base
   toolchain/base-extra
   toolchain/base-python
   toolchain/base-tools
