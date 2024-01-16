@@ -55,7 +55,6 @@ prelude:
   /usr/bin/gcc-config 1 &&
   source /etc/profile &&
   eselect gcc set 1 &&
-  eselect binutils set 1 &&
   mkdir -p /var/lib/portage &&
   eval 'rm /etc/localtime || true' &&
   ln -s /usr/share/zoneinfo/Europe/Rome /etc/localtime &&
