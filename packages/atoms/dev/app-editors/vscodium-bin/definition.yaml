@@ -1,5 +1,5 @@
 name: vscodium-bin
-version: 1.81.1.23222
+version: 1.85.1.23348
 category: app-editors
 use_flags:
 - hunspell
@@ -58,4 +58,4 @@ labels:
   kit: editors-kit
   original.package.name: app-editors/vscodium-bin
   original.package.slot: "0"
-  original.package.version: 1.81.1.23222
+  original.package.version: 1.85.1.23348
