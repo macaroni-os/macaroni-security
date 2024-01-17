@@ -25,10 +25,13 @@ prelude:
   fi ;
   done &&
   chown portage:portage -R /var/git/meta-repo/kits
-# Enable meson-0.63
-# I want move ahead meson
+# We need setup correctly ego arch,subarch,build.
+# This is not needed on macaroni-funtoo because we starts from
+# a funtoo stage3.
 - >-
-  sed -e 's/^RDEPEND=.*/RDEPEND=""/g' -i
-  /var/git/meta-repo/kits/core-kit/sys-apps/baselayout/baselayout-*.ebuild &&
-  sed '/meson/d' -i
-  /var/git/meta-repo/kits/core-kit/profiles/package.mask/01-funtoo
+  ego profile arch {{ ( index .Values.labels "ego.arch" ) }} &&
+  ego profile build {{ ( index .Values.labels "ego.build" ) }} &&
+  ego profile subarch {{ ( index .Values.labels "ego.subarch" ) }} &&
+  ego profile flavor {{ ( index .Values.labels "ego.flavor" ) }} &&
+  ego profile
+
