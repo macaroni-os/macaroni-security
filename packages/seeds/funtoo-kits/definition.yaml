@@ -1,5 +1,5 @@
 name: funtoo-kits
-version: 0.20240114+1
+version: "0.20240130"
 category: seed
 labels:
   ego.arch: x86-64bit
