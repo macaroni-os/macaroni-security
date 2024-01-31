@@ -1,5 +1,5 @@
 name: discord-bin
-version: 0.0.40
+version: 0.0.42
 category: net-im
 requires:
 - name: atk
@@ -110,4 +110,4 @@ labels:
   kit: net-kit
   original.package.name: net-im/discord-bin
   original.package.slot: "0"
-  original.package.version: 0.0.40
+  original.package.version: 0.0.42
