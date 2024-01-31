@@ -1,5 +1,5 @@
 name: vivaldi
-version: 6.5.3206.53
+version: 6.5.3206.57
 category: www-client
 use_flags:
 - -widevine
@@ -115,4 +115,4 @@ labels:
   kit: browser-kit
   original.package.name: www-client/vivaldi
   original.package.slot: "0"
-  original.package.version: 6.5.3206.53
+  original.package.version: 6.5.3206.57
