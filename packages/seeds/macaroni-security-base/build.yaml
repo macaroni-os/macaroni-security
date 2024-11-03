@@ -5,7 +5,7 @@ prelude:
   export LUET_NOLOCK=true &&
   anise repo update && anise i repository/macaroni-security-dev &&
   anise repo update && anise upgrade &&
-  anise i dev-util/cbindgen dev-libs/libnatspec app-arch/zip
+  anise i dev-util/cbindgen dev-libs/libnatspec app-arch/zip &&
   anise cleanup
 requires:
 - category: "seed"
