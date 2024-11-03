@@ -1,5 +1,5 @@
 name: brave-bin
-version: 1.62.153
+version: 1.71.121
 category: www-client
 requires:
 - name: at-spi2-atk
@@ -162,6 +162,7 @@ requires:
   version: '>=0'
   category: x11-libs
 annotations:
+  desktop_browser: true
   subsets:
     rules:
       devel:
@@ -197,4 +198,4 @@ labels:
   kit: browser-kit
   original.package.name: www-client/brave-bin
   original.package.slot: "0"
-  original.package.version: 1.62.153
+  original.package.version: 1.71.121
