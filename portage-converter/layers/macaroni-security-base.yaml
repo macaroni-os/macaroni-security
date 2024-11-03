@@ -26,6 +26,7 @@ packages:
   - app-arch/tar:0
   - app-arch/unzip:0
   - app-arch/xz-utils:0
+  - app-arch/zip:0
   - app-arch/zopfli:0
   - app-arch/zstd:0
   - app-benchmarks/hyperfine:0
@@ -256,6 +257,7 @@ packages:
   - dev-libs/libksba:0
   - dev-libs/libltdl:0
   - dev-libs/libmspack:0
+  - dev-libs/libnatspec:0
   - dev-libs/libnl:3
   - dev-libs/libpcre2:0
   - dev-libs/libpcre:3
@@ -614,6 +616,7 @@ packages:
   - dev-texlive/texlive-xetex:0
   - dev-util/boost-build:0
   - dev-util/cargo-c:0
+  - dev-util/cbindgen:0
   - dev-util/cmake:0
   - dev-util/cmocka:0
   - dev-util/colm:0
