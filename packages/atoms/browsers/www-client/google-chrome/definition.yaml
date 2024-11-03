@@ -1,5 +1,5 @@
 name: google-chrome
-version: 121.0.6167.85
+version: 130.0.6723.91
 category: www-client
 use_flags:
 - -selinux
@@ -101,6 +101,7 @@ requires:
   version: '>=0'
   category: x11-misc
 annotations:
+  desktop_browser: true
   subsets:
     rules:
       devel:
@@ -131,4 +132,4 @@ labels:
   kit: browser-kit
   original.package.name: www-client/google-chrome
   original.package.slot: "0"
-  original.package.version: 121.0.6167.85
+  original.package.version: 130.0.6723.91
