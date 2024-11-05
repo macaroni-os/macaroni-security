@@ -1,5 +1,5 @@
 name: vivaldi-snapshot
-version: 7.1.3510.4
+version: 7.1.3510.4+1
 category: www-client
 use_flags:
 - -widevine
